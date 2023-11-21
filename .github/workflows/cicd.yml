@@ -31,5 +31,5 @@ jobs:
       - run: cat ~/.aws/credentials
       - run: aws configure list-profiles
       - run: aws s3 ls --region eu-central-1 --profile amira
-      -uses: hashicorp/setup-terraform@v2
+      - uses: hashicorp/setup-terraform@v2
       - run: terraform version
