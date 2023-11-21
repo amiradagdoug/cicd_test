@@ -29,7 +29,7 @@ jobs:
         env: # Or as an environment variable
           super_secret: ${{ secrets.AWS_CONFIG }}
       - run: cat ~/.aws/credentials
-      - run: aws configure list-profiles
+      - run: aws configure list
       - run: aws s3 ls --region eu-central-1 --profile amira
       - uses: hashicorp/setup-terraform@v2
       - run: terraform version
