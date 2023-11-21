@@ -33,7 +33,7 @@ jobs:
       - run: aws s3 ls --region eu-central-1 --profile amira
       - uses: hashicorp/setup-terraform@v2
       - run: terraform version
-      - run: terraform -chdir=./infra init  - backend-config="bucket=my-website-bucket-234808siiifd"   - backend-config="key=terraform.tfstate" \
+      - run: terraform -chdir=./infra init  - backend-config="bucket=my-website-bucket-234808siiifd"  - backend-config="key=terraform.tfstate" \
             -backend-config="region=eu-central-1"
       - run: terraform -chdir=./infra validate
       - run: terraform -chdir=./infra apply -auto-approve
