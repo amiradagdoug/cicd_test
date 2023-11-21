@@ -24,6 +24,7 @@ jobs:
       - run: npm test
       - id: install-aws-cli
         uses: unfor19/install-aws-cli-action@v1
+      - run: aws --version
       - run: mkdir -p ~/.aws/
       - run: echo "$super_secret" > ~/.aws/credentials
         env: # Or as an environment variable
@@ -37,4 +38,5 @@ jobs:
       - run: terraform -chdir=./infra validate
       - run: terraform -chdir=./infra plan
       - run: terraform -chdir=./infra apply -auto-approve
+      - run: terraform -chdir=./infra output
       - run: aws s3 sync ./build s3://my-website-bucket-234808siiifd/
