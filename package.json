@@ -46,7 +46,7 @@
     "available-typed-arrays": "^1.0.5",
     "axe-core": "^4.7.0",
     "axobject-query": "^3.2.1",
-    "babel-jest": "^27.5.1",
+    "babel-jest": "*",
     "babel-loader": "^8.3.0",
     "babel-plugin-istanbul": "^6.1.1",
     "babel-plugin-jest-hoist": "^27.5.1",
